@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>El Libro de la Vida - Mishel ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- ==================== PANTALLA DE CARGA ==================== -->
+    <div id="pantalla-carga" class="pantalla-carga">
+        <div class="cargando-contenedor">
+            <div class="libro-animado-carga">
+                <div class="libro-carga-portada"></div>
+                <div class="libro-carga-paginas"></div>
+            </div>
+            <p class="cargando-texto-principal">Abriendo el Libro de la Vida de Mishel...</p>
+            <div class="barra-carga">
+                <div class="barra-progreso" id="barra-progreso"></div>
+            </div>
+            <div class="corazones-flotantes-carga">
+                <span>❤️</span><span>💛</span><span>💚</span><span>💙</span><span>💜</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CONTROLES GLOBALES ==================== -->
+    <button id="btn-musica-fondo" class="btn-musica-fondo" title="Música de fondo">🎵</button>
+    <button id="btn-fullscreen" class="btn-fullscreen" title="Pantalla completa">⛶</button>
+
+    <!-- ==================== CONTENEDOR PRINCIPAL ==================== -->
+    <div id="contenedor-principal" class="contenedor-principal oculto">
+        <div class="fondo-atmosferico">
+            <div class="velas-parpadeantes"></div>
+            <div class="flores-movimiento"></div>
+            <div class="polvo-estelar"></div>
+            <div class="papel-picado-float"></div>
+        </div>
+
+        <div class="escena-libro">
+            <div id="libro-container" class="libro-container">
+                <div id="libro" class="libro">
+                    
+                    <!-- ==================== PORTADA ==================== -->
+                    <div class="pagina portada" id="portada">
+                        <div class="pagina-contenido portada-contenido">
+                            <div class="sello-dorado">✧✦✧</div>
+                            <h1 class="titulo-libro-grande">El Libro de la Vida</h1>
+                            <div class="corazon-latente" id="corazon-latente">❤️</div>
+                            <h2 class="dedicatoria">de</h2>
+                            <h2 class="nombre-principal">Mishel</h2>
+                            <p class="frase-inspiradora">"Tu historia apenas comienza, y ya es mi favorita"</p>
+                            <p class="frase-inspiradora" style="font-size: 0.9rem;">Con cariño, Brandon ❤️</p>
+                            <button id="btn-abrir-libro" class="boton-abrir-libro">✨ Abrir el libro ✨</button>
+                            <div class="ornamentos-portada">
+                                <span>🌹</span><span>📖</span><span>✨</span><span>🌙</span><span>⭐</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 1: HARRY POTTER ==================== -->
+                    <div class="pagina interior pagina-1" data-pagina="1">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">⚡</span>
+                                <h2 class="pagina-titulo">Harry Potter</h2>
+                                <span class="decoracion-der">🪄</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="harry-potter.mp3" data-nombre="Harry Potter">🎵 Tema de Harry Potter 🎵</button>
+                            
+                            <div class="pagina-cuerpo">
+                                <div class="collage-pasion">
+                                    <div class="collage-izquierda">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">⚡ Harry Potter ⚡</p>
+                                            <img src="imagenes/harry-potter.jfif" alt="Harry Potter" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ La protagonista ✨</p>
+                                            <img src="imagenes/mishel-1.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🪄 Varita mágica 🪄</p>
+                                            <img src="imagenes/varita.jpg" alt="Varita" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="descripcion-pasion">
+                                    <p class="cita-magica">"No son nuestras habilidades... son nuestras elecciones."</p>
+                                    
+                                    <div class="porque-me-gusta">
+                                        <h3>✨ Por qué me gustas, Mishel ✨</h3>
+                                        <p>🔮 <strong>Porque...</strong> como Hermione, sos la más inteligente de la sala. Me encanta cómo te apasiona todo lo que hacés.</p>
+                                        <p>🪄 <strong>Porque...</strong> tenés esa magia especial que hace que cualquier momento contigo sea una aventura.</p>
+                                        <p>⚡ <strong>Porque...</strong> como Harry, tenés un corazón valiente. No le huís a nada y eso me inspira cada día.</p>
+                                    </div>
+                                    
+                                    <button class="btn-mensaje-especial" data-mensaje="⚡ Te confieso algo, Mishel: antes de conocerte, mi mundo era como un libro sin magia. Después de vos, cada página tiene hechizos, colores y algo de ternura. No sé si soy un mago, pero con vos me siento invencible. Feliz cumpleaños, mi Hermione. ⚡">✨ Revelar mensaje ✨</button>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">1 · El mundo mágico</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 2: BLAIR WALDORF ==================== -->
+                    <div class="pagina interior pagina-2" data-pagina="2">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">👑</span>
+                                <h2 class="pagina-titulo">Blair Waldorf</h2>
+                                <span class="decoracion-der">💋</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="blair-waldorf.mp3" data-nombre="Gossip Girl">🎵 Tema de Gossip Girl 🎵</button>
+                            
+                            <div class="pagina-cuerpo">
+                                <div class="collage-pasion">
+                                    <div class="collage-izquierda">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">👑 Diadema 👑</p>
+                                            <img src="imagenes/blair-diadema-.jpg" alt="Diadema" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ La reina ✨</p>
+                                            <img src="imagenes/mishel-2.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">💋 XOXO 💋</p>
+                                            <img src="imagenes/blair-xoxo.jfif" alt="XOXO" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="descripcion-pasion">
+                                    <p class="cita-magica">"Tú no eres una chica cualquiera. Eres una reina."</p>
+                                    
+                                    <div class="porque-me-gusta">
+                                        <h3>✨ Por qué me gustas, Mishel ✨</h3>
+                                        <p>👑 <strong>Porque...</strong> tenés esa elegancia natural que no se aprende, se nace con ella. Como Blair, sos única.</p>
+                                        <p>💎 <strong>Porque...</strong> sos inteligente, estratégica y siempre sabés lo que querés. Y si no lo sabés, lo descubrís.</p>
+                                        <p>🎭 <strong>Porque...</strong> detrás de esa reina, hay una persona auténtica que me tiene completamente enamorado.</p>
+                                    </div>
+                                    
+                                    <button class="btn-mensaje-especial" data-mensaje="👑 XOXO, Gossip Girl aquí. Te tengo un chisme: hay un chico que no puede dejar de pensar en vos. La última vez que te vio, se le paró el corazón. Y cada vez que sonreís, él siente que ganó la lotería. Spoiler: ese chico soy yo. Feliz cumpleaños, mi reina. 👑">👑 Revelar mensaje 👑</button>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">2 · La reina del estilo</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 3: REAL MADRID ==================== -->
+                    <div class="pagina interior pagina-3" data-pagina="3">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">👑</span>
+                                <h2 class="pagina-titulo">Real Madrid</h2>
+                                <span class="decoracion-der">⚽</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="real-madrid.mp3" data-nombre="Himno del Madrid">🎵 ¡Hala Madrid! 🎵</button>
+                            
+                            <div class="pagina-cuerpo">
+                                <div class="collage-pasion">
+                                    <div class="collage-izquierda">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">👑 Escudo del Madrid 👑</p>
+                                            <img src="imagenes/real-madrid-escudo.jpg" alt="Escudo Madrid" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ La estrella ✨</p>
+                                            <img src="imagenes/mishel-3.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🏆 Champions 🏆</p>
+                                            <img src="imagenes/real-madrid-champions.jpg" alt="Champions" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="descripcion-pasion">
+                                    <p class="cita-magica">"Hala Madrid... y nada más."</p>
+                                    
+                                    <div class="porque-me-gusta">
+                                        <h3>✨ Por qué me gustas, Mishel ✨</h3>
+                                        <p>🏆 <strong>Porque...</strong> como el Real Madrid, vos sos leyenda. No hay nadie como vos.</p>
+                                        <p>🤍 <strong>Porque...</strong> tenés esa garra de campeona, esa seguridad que hace que todo lo que tocas se convierta en oro.</p>
+                                        <p>⭐ <strong>Porque...</strong> sos la estrella que ilumina mi estadio. Y yo, como buen hincha, te llevo en la camiseta.</p>
+                                    </div>
+                                    
+                                    <button class="btn-mensaje-especial" data-mensaje="🤍 Hala Madrid, dicen en el Bernabéu. Pero yo te digo Hala Mishel, con el alma. Porque desde que te vi, sos la única dueña de mi corazón. No hay Champions que valga más que una noche con vos. Feliz cumpleaños, mi campeona. 🤍">🤍 Revelar mensaje 🤍</button>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">3 · La casa blanca</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 4: JUDE BELLINGHAM ==================== -->
+                    <div class="pagina interior pagina-4" data-pagina="4">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">🔟</span>
+                                <h2 class="pagina-titulo">Jude Bellingham</h2>
+                                <span class="decoracion-der">⚡</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="bellingham.mp3" data-nombre="Bellingham">🎵 Épica para un fenómeno 🎵</button>
+                            
+                            <div class="pagina-cuerpo">
+                                <div class="collage-pasion">
+                                    <div class="collage-izquierda">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🔟 Bellingham 🔟</p>
+                                            <img src="imagenes/bellingham.jfif" alt="Bellingham" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ El fenómeno eres tú ✨</p>
+                                            <img src="imagenes/mishel-4.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">⚽ Celebración ⚽</p>
+                                            <img src="imagenes/bellingham-celebracion.jpg" alt="Celebración" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="descripcion-pasion">
+                                    <p class="cita-magica">"El presente y el futuro, todo en uno."</p>
+                                    
+                                    <div class="porque-me-gusta">
+                                        <h3>✨ Por qué me gustas, Mishel ✨</h3>
+                                        <p>🌟 <strong>Porque...</strong> sos el presente y el futuro. Todo lo bueno que quiero en mi vida.</p>
+                                        <p>💪 <strong>Porque...</strong> tenés una fuerza increíble. Como Bellingham en la cancha, vos en mi vida sos imparable.</p>
+                                        <p>🎯 <strong>Porque...</strong> cuando te miro, sé que quiero estar siempre a tu lado. Sos mi mejor jugada.</p>
+                                    </div>
+                                    
+                                    <button class="btn-mensaje-especial" data-mensaje="🔟 Dicen que Bellingham es el futuro del fútbol. Pero vos, Mishel, sos el futuro de mi vida. Cada día que pasa me convenzo más: con vos quiero hacer el gol más importante de todos. Feliz cumpleaños, mi 10. 🔟">🔟 Revelar mensaje 🔟</button>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">4 · El prodigio</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 5: CR7 ==================== -->
+                    <div class="pagina interior pagina-5" data-pagina="5">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">7️⃣</span>
+                                <h2 class="pagina-titulo">Cristiano Ronaldo</h2>
+                                <span class="decoracion-der">🐐</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="cr7.mp3" data-nombre="CR7">🎵 Música del GOAT 🎵</button>
+                            
+                            <div class="pagina-cuerpo">
+                                <div class="collage-pasion">
+                                    <div class="collage-izquierda">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">7️⃣ CR7 7️⃣</p>
+                                            <img src="imagenes/cr7.jfif" alt="CR7" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ La GOAT ✨</p>
+                                            <img src="imagenes/mishel-5.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🐐 SIUUU 🐐</p>
+                                            <img src="imagenes/cr7-siuuu.jfif" alt="SIUUU" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="descripcion-pasion">
+                                    <p class="cita-magica">"El mejor de todos los tiempos."</p>
+                                    
+                                    <div class="porque-me-gusta">
+                                        <h3>✨ Por qué me gustas, Mishel ✨</h3>
+                                        <p>🏆 <strong>Porque...</strong> sos la mejor. En todo. En tu forma de ser, de reír, de mirar.</p>
+                                        <p>💪 <strong>Porque...</strong> tenés esa dedicación que admiro. Cuando querés algo, vas por ello sin mirar atrás.</p>
+                                        <p>✨ <strong>Porque...</strong> sos mi GOAT. Mi favorita. Mi número 1.</p>
+                                    </div>
+                                    
+                                    <button class="btn-mensaje-especial" data-mensaje="🐐 SIIIIUUUUUUUU! Así grito cada vez que te veo. Porque vos sos el GOAT de mi vida. Cristiano tiene 5 Balones de Oro, pero vos tenés mi corazón entero. Y eso no tiene precio. Feliz cumpleaños, mi campeona. 🐐">🐐 Revelar mensaje 🐐</button>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">5 · El GOAT</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 6: SCORPIONS ==================== -->
+                    <div class="pagina interior pagina-6" data-pagina="6">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">🎸</span>
+                                <h2 class="pagina-titulo">Scorpions</h2>
+                                <span class="decoracion-der">🎵</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="scorpions.mp3" data-nombre="Wind of Change">🎵 Wind of Change 🎵</button>
+                            
+                            <div class="pagina-cuerpo">
+                                <div class="collage-pasion">
+                                    <div class="collage-izquierda">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🎸 Logo Scorpions 🎸</p>
+                                            <img src="imagenes/scorpions-logo.jfif" alt="Scorpions" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ El viento que cambió mi vida ✨</p>
+                                            <img src="imagenes/mishel-6.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🌬️ Wind of Change 🌬️</p>
+                                            <img src="imagenes/scorpions-disco.jfif" alt="Disco" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="descripcion-pasion">
+                                    <p class="cita-magica">"Wind of change..."</p>
+                                    
+                                    <div class="porque-me-gusta">
+                                        <h3>✨ Por qué me gustas, Mishel ✨</h3>
+                                        <p>🎤 <strong>Porque...</strong> como esa canción, vos llegaste y todo cambió. Mi mundo antes era gris, ahora es puro rock.</p>
+                                        <p>🌍 <strong>Porque...</strong> con vos el mundo se siente más grande, más bonito, más lleno de posibilidades.</p>
+                                        <p>🎶 <strong>Porque...</strong> sos mi soundtrack favorito. La canción que quiero escuchar siempre.</p>
+                                    </div>
+                                    
+                                    <button class="btn-mensaje-especial" data-mensaje="🎸 'Wind of change' suena y yo pienso en vos. Porque antes de conocerte, mi vida era una canción en blanco y negro. Después de vos, tiene ritmo, tiene fuerza, tiene sentido. Cambiaste mi mundo, Mishel. Y solo quiero seguir escuchando tu melodía. Feliz cumpleaños. 🎸">🎸 Revelar mensaje 🎸</button>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">6 · El soundtrack de los 80s</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 7: MÚSICA FOLCLÓRICA - CHOLITA PACEÑA ==================== -->
+                    <div class="pagina interior pagina-7" data-pagina="7">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">🪶</span>
+                                <h2 class="pagina-titulo">Música Folclórica Boliviana</h2>
+                                <span class="decoracion-der">🎵</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="folclor.mp3" data-nombre="Cholita Paceña - Tupay">🎵 Cholita Paceña - Tupay 🎵</button>
+                            
+                            <div class="pagina-cuerpo">
+                                <div class="collage-pasion">
+                                    <div class="collage-izquierda">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🪶 Charango 🪶</p>
+                                            <img src="imagenes/charango.jfif" alt="Charango" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ Cholita Paceña ✨</p>
+                                            <img src="imagenes/mishel-7.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🇧🇴 Bandera de Bolivia 🇧🇴</p>
+                                            <img src="imagenes/bandera-bolivia.jfif" alt="Bandera" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="descripcion-pasion">
+                                    <p class="cita-magica">"Como dice la canción que tanto te gusta, sos esa cholita que mi alma gusta."</p>
+                                    
+                                    <div class="porque-me-gusta">
+                                        <h3>✨ Por qué me gustas, Mishel ✨</h3>
+                                        <p>🪶 <strong>Porque...</strong> como la Cholita Paceña, tenés esa gracia al andar, esa belleza que no se puede explicar con palabras.</p>
+                                        <p>🌄 <strong>Porque...</strong> llevás tu tierra en el corazón. Tu esencia boliviana es una de las cosas más lindas que tiene una persona.</p>
+                                        <p>❤️ <strong>Porque...</strong> cuando escucho esa canción, solo puedo pensar en vos. En tu sonrisa, en tu forma de ser, en todo lo que me haces sentir.</p>
+                                    </div>
+                                    
+                                    <button class="btn-mensaje-especial" data-mensaje="🪶 'Cholita paceña, de pollera y gracia al andar...' Así dice la canción que tanto te gusta. Y cada vez que la escucho, me acuerdo de vos. Porque sos esa cholita que me tiene loco, que con solo mirarme me hace flotar. Bolivia tiene la música más linda, pero vos tenés mi corazón. Feliz cumpleaños, mi cholita hermosa. 🇧🇴🪶❤️">🪶 Revelar mensaje 🪶</button>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">7 · Alma boliviana - Cholita Paceña</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 8: BOLÍVAR (CELESTE Y BLANCO) ==================== -->
+                    <div class="pagina interior pagina-8" data-pagina="8">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">🔵⚪</span>
+                                <h2 class="pagina-titulo">Club Bolívar</h2>
+                                <span class="decoracion-der">🏆</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="bolivar.mp3" data-nombre="Himno de Bolívar">🎵 Himno del Bolívar 🎵</button>
+                            
+                            <div class="pagina-cuerpo">
+                                <div class="collage-pasion">
+                                    <div class="collage-izquierda">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🔵⚪ Escudo Celeste 🔵⚪</p>
+                                            <img src="imagenes/bolivar-escudo.jfif" alt="Escudo Bolívar" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ La hincha más linda ✨</p>
+                                            <img src="imagenes/mishel-8.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🏆 El más grande 🏆</p>
+                                            <img src="imagenes/bolivar-trofeo.jfif" alt="Trofeo" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="descripcion-pasion">
+                                    <p class="cita-magica">"El más grande de Bolivia. La Academia Celeste."</p>
+                                    
+                                    <div class="porque-me-gusta">
+                                        <h3>✨ Por qué me gustas, Mishel ✨</h3>
+                                        <p>🔵 <strong>Porque...</strong> como Bolívar, sos la más grande. No hay otra como vos.</p>
+                                        <p>⚪ <strong>Porque...</strong> llevás la celeste con orgullo. Y yo quiero llevar tu amor con el mismo orgullo.</p>
+                                        <p>🏆 <strong>Porque...</strong> tu pasión por el fútbol me enamora. Ver cómo vibra tu corazón con el Bolívar me hace vibrar a mí también.</p>
+                                    </div>
+                                    
+                                    <button class="btn-mensaje-especial" data-mensaje="🔵⚪ Celeste como el cielo, grande como tu alma. El más grande de Bolivia sos vos, Mishel. Y si Bolívar es la academia, vos sos mi mejor enseñanza: que el amor puede llegar cuando menos lo esperás, y cuando llega, es para siempre. Feliz cumpleaños, mi celeste hermosa. 🔵⚪">🔵⚪ Revelar mensaje 🔵⚪</button>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">8 · La Academia Celeste 🔵⚪</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 9: POEMAS ==================== -->
+                    <div class="pagina interior pagina-9" data-pagina="9">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">📖</span>
+                                <h2 class="pagina-titulo">Poemas para ti</h2>
+                                <span class="decoracion-der">💌</span>
+                            </div>
+                            <button class="btn-musica-pagina" data-cancion="poemas.mp3" data-nombre="Música para leer">🎵 Para leer con música 🎵</button>
+                            
+                            <div class="pagina-cuerpo poemas-contenedor">
+                                <div class="collage-poemas">
+                                    <div class="collage-izquierda-poemas">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">📖 Inspiración 📖</p>
+                                            <img src="imagenes/libro-pluma.avif" alt="Libro" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro-poemas">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ Mi musa ✨</p>
+                                            <img src="imagenes/mishel-9.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha-poemas">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">💌 Corazón 💌</p>
+                                            <img src="imagenes/corazon-rosa.webp" alt="Corazón" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="lista-poemas" class="lista-poemas">
+                                    <!-- POEMA 1: HARRY POTTER -->
+                                    <div class="poema-card">
+                                        <h3>⚡ El hechizo de tu amor ⚡</h3>
+                                        <p>En un mundo de magia y varitas,</p>
+                                        <p>apareciste tú, mi hermosa verdad.</p>
+                                        <p>Como Gryffindor, tienes el valor,</p>
+                                        <p>y en mi corazón, tu propia comunidad.</p>
+                                        <br>
+                                        <p>No hace falta hechizo ni poción,</p>
+                                        <p>para que me tengas en tu poder.</p>
+                                        <p>Con solo tu risa y tu atención,</p>
+                                        <p>me haces cada día enloquecer.</p>
+                                        <br>
+                                        <p>Eres mi Hermione, mi luz, mi estrella,</p>
+                                        <p>la razón por la que quiero ser mejor.</p>
+                                        <p>Y aunque no tenga una varita como ella,</p>
+                                        <p>tú ya me robaste el corazón.</p>
+                                        <p class="poema-firma">— Brandon ⚡</p>
+                                    </div>
+                                    
+                                    <!-- POEMA 2: BLAIR WALDORF -->
+                                    <div class="poema-card">
+                                        <h3>👑 La reina de mi vida 👑</h3>
+                                        <p>Con diadema y estilo sin igual,</p>
+                                        <p>como Blair Waldorf, sos única y genial.</p>
+                                        <p>Tu elegancia no se puede comprar,</p>
+                                        <p>y en mi reino, vos sos la principal.</p>
+                                        <br>
+                                        <p>XOXO, dice Gossip Girl,</p>
+                                        <p>pero yo te digo con el corazón:</p>
+                                        <p>en este juego del amor,</p>
+                                        <p>vos sos mi única obsesión.</p>
+                                        <br>
+                                        <p>No importa si hay drama o confusión,</p>
+                                        <p>con vos todo tiene solución.</p>
+                                        <p>Sos mi Blair, mi reina, mi inspiración,</p>
+                                        <p>la dueña de mi corazón.</p>
+                                        <p class="poema-firma">— Brandon 👑</p>
+                                    </div>
+                                    
+                                    <!-- POEMA 3: REAL MADRID -->
+                                    <div class="poema-card">
+                                        <h3>🤍 Hala Madrid... y Hala Mishel 🤍</h3>
+                                        <p>Como el Real Madrid, vos sos leyenda,</p>
+                                        <p>en mi corazón jugás de titular.</p>
+                                        <p>No hay Champions que valga más,</p>
+                                        <p>que una noche con vos para celebrar.</p>
+                                        <br>
+                                        <p>Hala Madrid, grita el Bernabéu,</p>
+                                        <p>pero yo grito Hala Mishel con fe.</p>
+                                        <p>Porque como el equipo de las 14,</p>
+                                        <p>vos sos la más grande, lo sé.</p>
+                                        <br>
+                                        <p>Blanco como la nieve,</p>
+                                        <p>brillás como una estrella.</p>
+                                        <p>Y yo, como fiel aficionado,</p>
+                                        <p>te llevo en mi camiseta.</p>
+                                        <p class="poema-firma">— Brandon 🤍</p>
+                                    </div>
+                                    
+                                    <!-- POEMA 4: JUDE BELLINGHAM -->
+                                    <div class="poema-card">
+                                        <h3>🔟 Como Bellingham, sos el futuro 🔟</h3>
+                                        <p>Jude llegó y lo cambió todo,</p>
+                                        <p>como vos cuando te conocí.</p>
+                                        <p>Talento, magia, y ese modo,</p>
+                                        <p>de hacer que todo sea feliz.</p>
+                                        <br>
+                                        <p>Sos el presente y el porvenir,</p>
+                                        <p>la promesa que quiero cumplir.</p>
+                                        <p>Con vos no hay tiempo que perder,</p>
+                                        <p>porque a tu lado quiero envejecer.</p>
+                                        <br>
+                                        <p>Bellingham tiene el 5,</p>
+                                        <p>pero vos tenés mi 10.</p>
+                                        <p>La mejor jugada de mi vida,</p>
+                                        <p>fue cruzarme con tu ser.</p>
+                                        <p class="poema-firma">— Brandon 🔟</p>
+                                    </div>
+                                    
+                                    <!-- POEMA 5: CR7 -->
+                                    <div class="poema-card">
+                                        <h3>🐐 SIIIIUUUU... sos la mejor 🐐</h3>
+                                        <p>Cristiano es el GOAT, dicen todos,</p>
+                                        <p>pero vos sos mi número uno.</p>
+                                        <p>Con tu sonrisa y tu vuelo,</p>
+                                        <p>me elevás como ninguno.</p>
+                                        <br>
+                                        <p>SIIIIUUUU, grito con emoción,</p>
+                                        <p>cuando veo tu hermosa visión.</p>
+                                        <p>Como CR7, no te rindes jamás,</p>
+                                        <p>y de mi mente no te vas.</p>
+                                        <br>
+                                        <p>El mejor de todos los tiempos,</p>
+                                        <p>es como te quiero llamar.</p>
+                                        <p>Pero con letras más grandes,</p>
+                                        <p>porque con vos quiero estar.</p>
+                                        <p class="poema-firma">— Brandon 🐐</p>
+                                    </div>
+                                    
+                                    <!-- POEMA 6: SCORPIONS -->
+                                    <div class="poema-card">
+                                        <h3>🎸 Wind of change, el viento de tu amor 🎸</h3>
+                                        <p>Escucho Scorpions y pienso en vos,</p>
+                                        <p>en ese viento que cambió mi interior.</p>
+                                        <p>Llegaste como una canción,</p>
+                                        <p>y te quedaste en mi corazón.</p>
+                                        <br>
+                                        <p>"Wind of change" suena en mi mente,</p>
+                                        <p>desde que te vi frente a frente.</p>
+                                        <p>Cambiaste mi forma de ver la vida,</p>
+                                        <p>y ahora todo tiene tu medida.</p>
+                                        <br>
+                                        <p>Como la banda alemana,</p>
+                                        <p>sos eterna, sos única, sos humana.</p>
+                                        <p>Y aunque pasen los años,</p>
+                                        <p>mi amor por vos no se va.</p>
+                                        <p class="poema-firma">— Brandon 🎸</p>
+                                    </div>
+                                    
+                                    <!-- POEMA 7: CHOLITA PACEÑA (TUPAY) -->
+                                    <div class="poema-card">
+                                        <h3>🪶 Cholita Paceña 🪶</h3>
+                                        <p>Como dice la canción que tanto te gusta,</p>
+                                        <p>sos esa cholita que mi alma gusta.</p>
+                                        <p>Con tu pollera y tu gracia al andar,</p>
+                                        <p>me hiciste en un segundo enamorar.</p>
+                                        <br>
+                                        <p>De La Paz a mi corazón,</p>
+                                        <p>llegaste con tu dulce voz.</p>
+                                        <p>Como Tupay canta con emoción,</p>
+                                        <p>yo canto por vos esta canción.</p>
+                                        <br>
+                                        <p>Cholita paceña, de mirada tierna,</p>
+                                        <p>con tu sonrisa alegras mi vida entera.</p>
+                                        <p>Que viva Bolivia, que viva el folclor,</p>
+                                        <p>y que viva siempre este amor.</p>
+                                        <p class="poema-firma">— Brandon 🪶🇧🇴</p>
+                                    </div>
+                                    
+                                    <!-- POEMA 8: BOLÍVAR -->
+                                    <div class="poema-card">
+                                        <h3>🔵⚪ La Academia de mi corazón 🔵⚪</h3>
+                                        <p>Celeste como el cielo,</p>
+                                        <p>grande como tu alma.</p>
+                                        <p>El más grande de Bolivia,</p>
+                                        <p>como vos, sos la calma.</p>
+                                        <br>
+                                        <p>Bolívar es pasión, es tradición,</p>
+                                        <p>es la academia de mi nación.</p>
+                                        <p>Y vos, Mishel, sos mi religión,</p>
+                                        <p>la dueña de mi corazón.</p>
+                                        <br>
+                                        <p>Como en la cancha, sos la goleadora,</p>
+                                        <p>en mi vida sos la ganadora.</p>
+                                        <p>Celeste te llevo en la piel,</p>
+                                        <p>y este amor es más que un papel.</p>
+                                        <p class="poema-firma">— Brandon 🔵⚪</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">9 · Poemas del corazón</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== PÁGINA 10: BOTÓN DE SALIDA CON SORPRESA ==================== -->
+                    <div class="pagina interior pagina-10" data-pagina="10">
+                        <div class="pagina-contenido">
+                            <div class="pagina-titulo-decorado">
+                                <span class="decoracion-izq">🎁</span>
+                                <h2 class="pagina-titulo">¿Celebramos?</h2>
+                                <span class="decoracion-der">✨</span>
+                            </div>
+                            <div class="pagina-cuerpo salida-contenedor">
+                                <div class="collage-salida">
+                                    <div class="collage-izquierda-salida">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🎁 Una sorpresa 🎁</p>
+                                            <img src="imagenes/regalo-sorpresa.jfif" alt="Regalo" class="img-pasion">
+                                        </div>
+                                    </div>
+                                    <div class="collage-centro-salida">
+                                        <div class="foto-mishel-principal">
+                                            <p class="subtitulo-foto">✨ La invitada especial ✨</p>
+                                            <img src="imagenes/mishel-10.jpg" alt="Mishel" class="foto-mishel-grande">
+                                        </div>
+                                    </div>
+                                    <div class="collage-derecha-salida">
+                                        <div class="imagen-pasion">
+                                            <p class="label-imagen">🎉 Celebración 🎉</p>
+                                            <img src="imagenes/globos-celebracion.webp" alt="Globos" class="img-pasion">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="salida-mensaje">
+                                    <p class="salida-pregunta">🌟 Mishel, ¿quieres salir conmigo a celebrar tu cumpleaños? 🌟</p>
+                                    <p class="salida-detalle">Tengo una sorpresa preparada para vos... solo tengo que saber si decís que sí 💕</p>
+                                    <div class="botones-salida">
+                                        <button id="btn-si-salir" class="btn-si-salir">🎁 ¡Sí, quiero saber la sorpresa! 🎁</button>
+                                        <button id="btn-captura" class="btn-captura">📸 Tomar captura y enviar 📸</button>
+                                    </div>
+                                    <div id="mensaje-captura" class="mensaje-captura oculto">
+                                        <p>✨ ¡Toma una captura de pantalla y envíamela! ✨</p>
+                                        <p>Así sé que quieres descubrir la sorpresa conmigo 💕</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagina-numero">10 · La pregunta más importante</div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== CONTRAPORTADA ==================== -->
+                    <div class="pagina contraportada" id="contraportada">
+                        <div class="pagina-contenido contraportada-contenido">
+                            <h2 class="contraportada-titulo">Y la historia continúa...</h2>
+                            <div class="contraportada-decoracion">📖✨🌙</div>
+                            <p class="contraportada-texto">Este libro apenas comienza.</p>
+                            <p class="contraportada-texto">La mejor parte aún está por escribirse.</p>
+                            <p class="contraportada-texto">Contigo. Siempre contigo.</p>
+                            <p class="contraportada-firma">Con cariño, Brandon ❤️</p>
+                            <button id="btn-cerrar-libro" class="boton-cerrar-libro">📖 Cerrar libro 📖</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles de navegación -->
+        <div class="controles-navegacion">
+            <button id="btn-pagina-anterior" class="nav-btn" disabled>◀ Anterior</button>
+            <span id="indicador-pagina" class="indicador-pagina">Portada</span>
+            <button id="btn-pagina-siguiente" class="nav-btn">Siguiente ▶</button>
+        </div>
+    </div>
+
+    <div id="efectos-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+    <script src="script.js"></script>
+</body>
+</html>
